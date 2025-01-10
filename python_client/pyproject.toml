@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "python-client"
+version = "0.1.0"
+description = "Python client for CS150 Project"
+authors = ["Serials Group"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+cs150241project-networking = {git = "https://github.com/UPD-CS150-241/cs150241project_networking"}
+pytest = "^8.3.4"
+pygame = "^2.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "src"

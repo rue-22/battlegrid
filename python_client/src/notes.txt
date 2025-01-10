@@ -1,0 +1,77 @@
+Notes ni ligs:
+
+Removed: 
+
+
+Gameplay mechanics:
+- literal na ilibot
+
+Test ideas:
+- permutation na icacapture lahat ng piesces
+
+Assumptions: 
+
+
+Need to do:
+To do tomorrow:
+- update assets.png (wait for elle)
+- map variant on model and update on view
+- implement mouse pointer when hoevered
+- add turns left mechanic  
+- Post game message 
+- separate moveset.py to another py file (gawin to pag naulul groupmates)
+
+Observers:
+#protocol to be implemented by view:
+
+DONE
+class GameStateChangeObserver(Protocol): 
+    def on_state_change(self, state: GameState):
+        ...
+
+#protocols to be implemented by controller:
+class ActionObserver(Protocol):
+    def on_action(self, action: Action, piece: Piece, to: Location):
+        ...
+
+class NewGameObserver(Protocol):
+    def on_new_game(self):
+        ...
+
+class GameOverObserver(Protocol):
+    def on_game_over(self):
+        ...
+
+Major Changes/Updates:
+ 
+
+Assumptions:
+- Pieces potential moveset is always set, di siya tulad ng chess na infinite range
+
+Need to implement:
+- square class
+- Drop piece feature, wala pang idea sa view
+    - verify restrictions on where to drop 
+- Check(game mechanic) feature 
+    Idea: 
+    - force eat
+    - force protected piece to move (not sure)
+- Game over mechanic
+    Idea: 
+    - wala pa XD
+- Start View and Controller:
+    - Initialization of board:
+        - use collide point to select current piece basta parang chess 
+    
+
+
+Need to double check / test:
+- if equality on classes works: 
+    - Piece
+    - Location
+    - side
+- LSP on classes 
+- For testing
+    - Create new istance of board that recreates a draw situation
+
+

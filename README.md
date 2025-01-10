@@ -1,6 +1,6 @@
 ![logo](python_client/src/assets/logo.png)
 # Battlegrid
-**Battlegrid** is a two-player board game where every move count. Command an army of classes — from powerful mages to brave guards — across four different maps.
+**Battlegrid** is a two-player board game where every move counts. Command an army of classes — from powerful mages to brave guards — across four different maps. Let the chaos begin.
 
 ## Gameplay
 This game is composed of different [classes](#classes). Each class has their own movement pattern.
